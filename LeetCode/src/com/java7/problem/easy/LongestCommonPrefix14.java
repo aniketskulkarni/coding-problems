@@ -27,45 +27,6 @@ public class LongestCommonPrefix14 {
 	if (strs == null || strs.length == 0) {
 	    return "";
 	}
-	int[] charCountArr = new int[123]; // z's ASCII value is 122
-	for (int i = 0; i < strs.length; i++) {
-	    for (int j = 0; j < strs[i].length(); j++) {
-		charCountArr[(int) strs[i].charAt(j)] = ++charCountArr[strs[i].charAt(j)];
-	    }
-	}
-	StringBuilder ans = new StringBuilder();
-	String test = strs[0];
-	if (test.length() > 0) {
-	    for (int i = 0; i < test.length(); i++) {
-		if (charCountArr[test.charAt(i)] > strs.length
-			&& charCountArr[test.charAt(i)] / strs.length == strs.length) {
-		    ans.append(test.charAt(i));
-		} else {
-		    break;
-		}
-	    }
-	}
-	return ans.toString();
-    }
-
-    public static void main(String[] args) {
-	LongestCommonPrefix14 obj = new LongestCommonPrefix14();
-	// String[] strs = { "flower", "flow", "flight" };
-	// String[] strs = { "dog", "racecar", "car" };
-	// String[] strs = { "aabb", "aa" };
-	// String[] strs = { "aa", "aa" };
-	// String[] strs = { "c", "c" };
-	// String[] strs = { "aa", "aa", "aabb" };
-	// String[] strs = { "" };
-	// String[] strs = { "aca", "cba" };
-	// String[] strs = { "a", "aca", "accb", "b" };
-	// System.out.println(obj.longestCommonPrefix2(strs));
-    }
-
-    public String longestCommonPrefix2(String[] strs) {
-	if (strs == null || strs.length == 0) {
-	    return "";
-	}
 	StringBuilder tmp = new StringBuilder();
 	String ans = strs[0];
 	for (int i = 0; i < strs.length - 1; i++) {
