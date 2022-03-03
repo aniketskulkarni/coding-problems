@@ -1,7 +1,5 @@
 package com.java7.problem.easy.array;
 
-import javax.swing.TransferHandler.TransferSupport;
-
 /**
  * Given an array of integers arr, return true if and only if it is a valid
  * mountain array.
